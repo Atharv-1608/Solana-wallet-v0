@@ -93,7 +93,7 @@ function App() {
               value={inputMnemonic}
               onChange={(e)=>setInputMnemonic(e.target.value)}
             />
-            <button className='bg-pink-300 p-3' onClick={generateBoth}>
+            <button className='bg-pink-300 p-3 rounded-4xl' onClick={generateBoth}>
               Generate wallet
             </button>
           </div>
@@ -125,13 +125,13 @@ function App() {
               </div>
 
               <div>
-                <div className='flex gap-5 pb-2'>
+                <div className='flex gap-5 pb-2 items-center'>
                 <h3 className='text-xl font-semibold'>Private Key:</h3>
                 <button onClick={()=>{
                   setShowKey(true)
                   
                 }}
-                className={`${showKey ? "hidden" : "bg-[#7AB2B2] p-1"}`}
+                className={`${showKey ? "hidden" : "bg-[#7AB2B2] p-2 rounded-2xl"}`}
                 >{showKey ? " " : "Show key"}</button>
                 </div>
                 <p className={`bg-red-100 p-3 rounded break-all text-sm ${showKey ? 'opacity-100' : 'opacity-0'}`}
