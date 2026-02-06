@@ -109,14 +109,17 @@ function App() {
                 Solana wallet :
               </div>
 
-              <div className='mb-4'>
+              <div className='mb-4 '>
+                <div className='flex gap-3 items-center pb-2'>
                 <h3 className='text-xl font-semibold'>Seed Phrase:</h3>
+                <p className='opacity-75'>click on seed phrase to copy</p>
+                </div>
                 <p className='bg-yellow-100 p-3 rounded wrap-break-words'
                 onClick={() => copyText(mnemonic, 'Seed phrase')}
                 >{mnemonic}</p>
               </div>
               
-              <div className='mb-4'>
+              <div className='mb-4 pb-2'>
                 <h3 className='text-xl font-semibold'>Public Key:</h3>
                 <p className='bg-green-100 p-3 rounded break-all text-sm'>{publicKey}</p>
               </div>
@@ -128,7 +131,7 @@ function App() {
                   setShowKey(true)
                   
                 }}
-                className={`${showKey ? "hidden" : "bg-[#7AB2B2] p-2"}`}
+                className={`${showKey ? "hidden" : "bg-[#7AB2B2] p-1"}`}
                 >{showKey ? " " : "Show key"}</button>
                 </div>
                 <p className={`bg-red-100 p-3 rounded break-all text-sm ${showKey ? 'opacity-100' : 'opacity-0'}`}
